@@ -4,7 +4,7 @@
 /**
  * main-program entry point.
  * Return:0-no error,non zero value if error.
- **/
+*/
 int main(void)
 {
 	int n;
@@ -23,4 +23,3 @@ int main(void)
 		printf("%d is zero\n", n);
 	return (0);
 }
-
