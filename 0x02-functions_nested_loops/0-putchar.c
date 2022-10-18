@@ -1,18 +1,23 @@
+#include "main.h"
+
 /**
- * main - Entry point
- * Description: prints 'Holberton \n'
- * Results: Always 0 (success)
- * Return: Always 0 (success)
+ * main - this program prints _putchar
+ *
+ * Return: (0) if successful
  */
+
 int main(void)
 {
-@@ -12,6 +12,7 @@ int i = 0;
-while (str[i] != '\0')
-	{
-	char c = str[i];
+	char var[] = "_putchar";
+	int ii;
+	/*length of the array var*/
+	int lenVar = sizeof(var) / sizeof(var[0]);
 
-	_putchar(c);
-	i++;
+	for (ii = 0; ii < lenVar - 1; ii++)
+	{
+		_putchar(var[ii]);
 	}
-return (0);
+		_putchar('\n');
+
+	return (0);
 }
