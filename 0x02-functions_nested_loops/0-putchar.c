@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * main - this program prints _putchar
@@ -15,9 +15,9 @@ int main(void)
 
 	for (ii = 0; ii < lenVar - 1; ii++)
 	{
-		_putchar(var[ii]);
+		putchar(var[ii]);
 	}
-		_putchar('\n');
+		putchar('\n');
 
 	return (0);
 }
