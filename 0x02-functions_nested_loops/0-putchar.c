@@ -1,23 +1,21 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - this program prints _putchar
+ * main - Prints Holberton as a message.
  *
- * Return: (0) if successful
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	char var[] = "_putchar";
-	int ii;
-	/*length of the array var*/
-	int lenVar = sizeof(var) / sizeof(var[0]);
+	int str[] = {95, 112, 117, 116, 99, 104, 97, 114};
+	int count, sz;
 
-	for (ii = 0; ii < lenVar - 1; ii++)
+	sz = sizeof(str) / sizeof(int);
+	for (count = 0; count < sz; count++)
 	{
-		putchar(var[ii]);
+		_putchar(str[count]);
 	}
-		putchar('\n');
-
+	_putchar('\n');
 	return (0);
 }
+
