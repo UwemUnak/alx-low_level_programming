@@ -1,32 +1,39 @@
+#include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
+
 /**
- * main - display name of program
- * @argc:int
- * @argv:string
- * Return:int
+ * main - prints the minimum number of coins
+ * to make change for an amount of money
+ * @argc: holds the number of arguements passed
+ * @argv: the array pointer that holds the arguement passed
+ * Return: always 0 (success)
  */
 int main(int argc, char *argv[])
+int cents, coins_number = 0;
+if (argc != 2)
 {
-	if (argc == 1)
-	{
-		printf("%s\n", argv[0]);
-	}
-	return (0);
+printf("Error\n");
+return (1);
 }
- 14  
-0x0A-argc_argv/1-args.c
-@@ -0,0 +1,14 @@
-#include <stdio.h>
-/**
- * main - display num of arg
- * @argc:int
- * @argv:string
- * Return:int
- */
-int main(int argc, char *argv[] __attribute__((unused)))
+else
 {
-
-		printf("%d\n", argc - 1);
-
-	return (0);
+cents = atoi(argv[1]);
+while (cents > 0)
+{
+if (cents >= 25)
+cents -= 25;
+else if (cents >= 10)
+cents -= 10;
+else if (cents >= 5)
+cents -= 5;
+else if (cents >= 2)
+cents -= 2;
+else if (cents >= 1)
+cents -= 1;
+coins_number += 1;
+}
+}
+printf("%d\n", coins_number);
+return (0);
 }
