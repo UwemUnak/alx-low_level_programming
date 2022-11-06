@@ -1,26 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
- * main - mul 2 argv
+ * main - add
  * @argc:int
  * @argv:string
  * Return:int
  */
 int main(int argc, char *argv[])
 {
-	int x, i, j;
-
-if (argc != 3)
+int x = 0, i, j;
+for (i = 1; i < argc; i++)
 {
-	printf("Error\n");
-	return (1);
-}
-else
+for (j = 0; argv[i][j]; j++)
 {
-	i = atoi(argv[1]);
-	j = atoi(argv[2]);
-	x = i * j;
-	printf("%d\n", x);
+if (isdigit(argv[i][j]) == 0)
+{
+printf("Error\n");
+return (1);
 }
+}
+}
+for (i = 1; i < argc; i++)
+{
+x += atoi(argv[i]);
+}
+printf("%d\n", x);
 return (0);
 }
